@@ -2,4 +2,7 @@
 layout: default
 title: dohrau.github.io
 ---
-<h1>{{ page.title }}</h1>
+{% assign sections = site.sections | sort: order %}
+{% for section in sections %}
+    {% include section.html %}
+{% endfor %}
